@@ -8,19 +8,14 @@ test:
 
 format:	
 	black *.py 
+	nbqa black src/*.ipynb 
 
 lint:
 	#disable comment to test speed
 	#pylint --disable=R,C --ignore-patterns=test_.*?py *.py 
 	#ruff linting is 10-100X faster than pylint
 	ruff check *.py 
+	nbqa ruff src/*.ipynb
 
-container-lint:
-	docker run --rm -i hadolint/hadolint < Dockerfile
-
-refactor: format lint
-
-deploy:
-	#deploy goes here
 		
 all: install lint test format #deploy
