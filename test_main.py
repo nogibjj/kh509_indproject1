@@ -27,4 +27,3 @@ def test_does_graph_save():
 if __name__ == '__main__':
     test_does_graph_save()
     test_calc_desc_for_iris()
-    print("All tests passed!")
