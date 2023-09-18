@@ -21,4 +21,4 @@ lint:
 
 
 		
-all: install lint test format #deploy
+all: install test format lint #deploy
