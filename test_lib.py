@@ -70,12 +70,11 @@ def test_quantiles():
 #here will will test the graph
 
 def test_graph():
-    result = boxplot_of_cols(None, col1='A', col2='B')
-    assert result is None
-    data = {'X': [1, 2, 3], 'Y': [4, 5, 6]}
-    df = pd.DataFrame(data)
-    boxplot_of_cols(df, col1='X', file_name='testfunctionality')
-    assert os.path.exists('testfunctionality')
+    import os
+    
+    data = pd.read_csv("datasets/iris.csv")
+    boxplot_of_cols(data,'petal.length')
+    assert os.path.isfile("boxplot.png")
 
 
 if __name__ == "__main__":

@@ -8,19 +8,20 @@ from  lib import calc_desc_stat, boxplot_of_cols
 
 def test_calc_desc_for_iris():
     data = pd.read_csv("datasets/iris.csv")
-    results = calc_desc_stat(data['petal.length'])
+    assert calc_desc_stat(None) == "There is nothing to calculate, please input a dataframe column"
+    output=calc_desc_stat(data['petal.length'])
+    assert round(output[1],2) == 3.76
+
 
 
 
 def test_does_graph_plot():
-    import os
-    df1 = pd.read_csv('datasets/iris.csv')
-    test_dir = os.path.dirname(__file__)
-    csv_file_path = os.path.join(test_dir, 'datasets', 'iris.csv')
-    df1 = pd.read_csv(csv_file_path)
-    plot_file_path = os.path.join(test_dir, 'sepal vs petal')
-    boxplot_of_cols(df1, 'petal.length', 'sepal.length', file_name=plot_file_path)
-    assert os.path.exists(plot_file_path)
+    break_list = [1,2,3]
+    result = boxplot_of_cols(None, col1='A', col2='B')
+    assert result == "This is the wrong input, you have <class 'NoneType'>"
+
+    output = boxplot_of_cols(break_list, col1='A', col2='B')
+    assert output == "This is the wrong input, you have <class 'list'>"
 
 
 if __name__ == '__main__':
