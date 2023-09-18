@@ -1,9 +1,9 @@
 import pandas as pd
 from  lib import calc_desc_stat, boxplot_of_cols
 
-data = {'Height': [5.1, 6.2, 5.1, 5.2]}
+#data = {'Height': [5.1, 6.2, 5.1, 5.2]}
 
-testing_df = pd.DataFrame(data)
+#testing_df = pd.DataFrame(data)
 #out=calc_desc_stat(testing_df['Height'])
 
 def test_calc_desc_for_iris():
@@ -17,6 +17,14 @@ def test_calc_desc_for_iris():
     assert 'Median' in results
     assert 'Standard Deviation' in results
 
-def does_graph_save():
-    #boxplot_of_col(testing_df,'Height')
-    #assert os.path.isfile("boxplot.png")
+def test_does_graph_save():
+    df1 = pd.read_csv('datasets/iris.csv')
+    boxplot_of_cols(df1, 'petal.length', 'sepal.length', file_name='test.png')
+    import os
+    assert os.path.exists('test.png')
+
+
+if __name__ == '__main__':
+    test_does_graph_save()
+    test_calc_desc_for_iris()
+    print("All tests passed!")
