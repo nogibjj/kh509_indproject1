@@ -9,6 +9,7 @@ from  lib import calc_desc_stat, boxplot_of_cols
 def test_calc_desc_for_iris():
     data = pd.read_csv("datasets/iris.csv")
     results = calc_desc_stat(data['petal.length'])
+    
 
 
 def test_does_graph_save():
