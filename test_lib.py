@@ -1,6 +1,7 @@
 import pandas as pd 
 import math
 import numpy as np
+import os
 from lib import calc_desc_stat, boxplot_of_cols
 
 
@@ -69,10 +70,12 @@ def test_quantiles():
 #here will will test the graph
 
 def test_graph():
-    import os
-    iris = pd.read_csv('datasets/iris.csv')
-    boxplot_of_cols(iris,'petal.length', file_name='testing')
-    assert os.path.isfile("testing.png")
+    result = boxplot_of_cols(None, col1='A', col2='B')
+    assert result is None
+    data = {'X': [1, 2, 3], 'Y': [4, 5, 6]}
+    df = pd.DataFrame(data)
+    boxplot_of_cols(df, col1='X', file_name='testfunctionality')
+    assert os.path.exists('testfunctionality')
 
 
 if __name__ == "__main__":
