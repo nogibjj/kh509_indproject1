@@ -8,7 +8,7 @@ from  lib import calc_desc_stat, boxplot_of_cols
 
 def test_calc_desc_for_iris():
     data = pd.read_csv("datasets/iris.csv")
-    assert calc_desc_stat(None) == "There is nothing to calculate, please input a dataframe column"
+    assert calc_desc_stat(None) == "Please input a dataframe column"
     output=calc_desc_stat(data['petal.length'])
     assert round(output[1],2) == 3.76
 

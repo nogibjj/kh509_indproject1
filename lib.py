@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 def calc_desc_stat(dataset_col):
     if dataset_col is None: 
-        return "There is nothing to calculate, please input a dataframe column"
+        return "Please input a dataframe column"
     out=dataset_col.describe()
     return out
 
