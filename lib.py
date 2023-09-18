@@ -26,7 +26,8 @@ def boxplot_of_cols(df_wanted=None, col1=None, col2=None, col3=None, file_name=N
         return
     
     df_to_plot = df_wanted[list_of_columns]
-    ax = df_to_plot.boxplot()
+    
+    df_to_plot.boxplot()
     
     if file_name:
         plt.savefig(file_name)
