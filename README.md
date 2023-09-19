@@ -8,16 +8,16 @@ My individual project uses two datasets: wine_quality.csv and iris.csv. The proj
 # Requirements.txt:
 ### This code uses the following libraries to lint, test, format, plot, and calculate for the project. 
 
-ruff==0.0.284
-pytest==7.1.3
-black==22.3.0
-pandas==2.0.0 
-pytest-cov==4.0.0
-pylint==2.15.3
-matplotlib==3.7.0
-nbval==0.10.0
-nbqa==1.7.0
-boto3==1.24.87
+- ruff==0.0.284
+- pytest==7.1.3
+- black==22.3.0
+- pandas==2.0.0 
+- pytest-cov==4.0.0
+- pylint==2.15.3
+- matplotlib==3.7.0
+- nbval==0.10.0
+- nbqa==1.7.0
+- boto3==1.24.87
 
 
 # Worflow 
