@@ -10,6 +10,11 @@ Katelyn Hucker (kh509)
 # Summary and Goals
 My individual project uses two datasets: wine_quality.csv and iris.csv. The project has the goal to calculate descriptive statistics from a dataframe column, and plot boxplots to compare different columns within a dataframe. The functions are defined in the lib.py file, which are then called in both the jupytr notebooks, stat1.py. The jupytr notebook uses the wine_quality.csv, while stat1.py uses iris.csv. They both perform function calls from the lib.py file. They output graphs and descriptive statistics based on function inputs. 
 
+# Video Explanation:
+Here is a video explaining my code project. 
+https://youtu.be/v2XUJu2zhHw
+
+
 # Requirements.txt:
 ### This code uses the following libraries to lint, test, format, plot, and calculate for the project. 
 
