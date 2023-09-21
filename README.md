@@ -2,10 +2,10 @@
 Individual Project #1
 Katelyn Hucker (kh509)
 
-![example workflow](https://github.com/nogibjj/kh509_indproject1/actions/workflows/format.yml/badge.svg)
-![example workflow](https://github.com/nogibjj/kh509_indproject1/actions/workflows/lint.yml/badge.svg)
-![example workflow](https://github.com/nogibjj/kh509_indproject1/actions/workflows/install.yml/badge.svg)
-![example workflow](https://github.com/nogibjj/kh509_indproject1/actions/workflows/test.yml/badge.svg)
+[![Format](https://github.com/nogibjj/kh509_indproject1/actions/workflows/format.yml/badge.svg)](https://github.com/nogibjj/kh509_indproject1/actions/workflows/format.yml)
+[![Lint](https://github.com/nogibjj/kh509_indproject1/actions/workflows/lint.yml/badge.svg)](https://github.com/nogibjj/kh509_indproject1/actions/workflows/lint.yml)
+[![OnInstall](https://github.com/nogibjj/kh509_indproject1/actions/workflows/install.yml/badge.svg)](https://github.com/nogibjj/kh509_indproject1/actions/workflows/install.yml)
+[![Test](https://github.com/nogibjj/kh509_indproject1/actions/workflows/test.yml/badge.svg)](https://github.com/nogibjj/kh509_indproject1/actions/workflows/test.yml)
 
 # Summary and Goals
 My individual project uses two datasets: wine_quality.csv and iris.csv. The project has the goal to calculate descriptive statistics from a dataframe column, and plot boxplots to compare different columns within a dataframe. The functions are defined in the lib.py file, which are then called in both the jupytr notebooks, stat1.py. The jupytr notebook uses the wine_quality.csv, while stat1.py uses iris.csv. They both perform function calls from the lib.py file. They output graphs and descriptive statistics based on function inputs. 
